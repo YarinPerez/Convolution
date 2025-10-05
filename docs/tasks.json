@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "title": "Project Setup: Install Libraries",
+    "description": "Choose and install necessary libraries for numerical computation (e.g., NumPy) and plotting (e.g., Matplotlib or Plotly).",
+    "status": "todo",
+    "dependencies": []
+  },
+  {
+    "id": 2,
+    "title": "Signal Generation: Implement Signal Generation",
+    "description": "Implement a function to generate the sine wave signal based on the specified parameters (10 cycles, 200 samples per cycle).",
+    "status": "todo",
+    "dependencies": [1]
+  },
+  {
+    "id": 3,
+    "title": "Signal Generation: Write Unit Tests",
+    "description": "Write unit tests to verify the correctness of the signal generation.",
+    "status": "todo",
+    "dependencies": [2]
+  },
+  {
+    "id": 4,
+    "title": "User Interface: Create Basic UI",
+    "description": "Create a basic UI to display the generated signal.",
+    "status": "todo",
+    "dependencies": [2]
+  },
+  {
+    "id": 5,
+    "title": "User Interface: Implement Segment Selection",
+    "description": "Implement the functionality for the user to select a segment of the signal.",
+    "status": "todo",
+    "dependencies": [4]
+  },
+  {
+    "id": 6,
+    "title": "User Interface: Implement Snap to Sample Points",
+    "description": "Ensure the selection mechanism snaps to the discrete sample points of the signal.",
+    "status": "todo",
+    "dependencies": [5]
+  },
+  {
+    "id": 7,
+    "title": "Convolution: Implement Convolution",
+    "description": "Implement the convolution operation between the signal and the selected segment (kernel). Note: The convolution should be implemented in a way that the result peaks when the pattern is matched. This can be achieved by using normalized cross-correlation or by manipulating the kernel.",
+    "status": "todo",
+    "dependencies": [2, 6]
+  },
+  {
+    "id": 8,
+    "title": "Convolution: Write Unit Tests",
+    "description": "Write unit tests to verify the correctness of the convolution implementation.",
+    "status": "todo",
+    "dependencies": [7]
+  },
+  {
+    "id": 9,
+    "title": "Pattern Matching: Implement Peak Identification",
+    "description": "Implement the logic to identify the peaks in the convolution output, which correspond to the matched patterns.",
+    "status": "todo",
+    "dependencies": [7]
+  },
+  {
+    "id": 10,
+    "title": "Pattern Matching: Extract Matched Pattern Indices",
+    "description": "Implement a function to extract the indices of the matched patterns in the original signal.",
+    "status": "todo",
+    "dependencies": [9]
+  },
+  {
+    "id": 11,
+    "title": "Visualization: Implement Main Plot",
+    "description": "Implement the visualization of the original signal, the selected pattern, and the highlighted matched patterns in a single plot.",
+    "status": "todo",
+    "dependencies": [2, 6, 10]
+  },
+  {
+    "id": 12,
+    "title": "Visualization: Implement Convolution Plot",
+    "description": "Implement the visualization of the convolution result in a separate plot.",
+    "status": "todo",
+    "dependencies": [7]
+  },
+  {
+    "id": 13,
+    "title": "Visualization: Implement Image Save",
+    "description": "Add a feature to save the visualizations as an image file (e.g., PNG).",
+    "status": "todo",
+    "dependencies": [11, 12]
+  },
+  {
+    "id": 14,
+    "title": "Main Application: Integrate Components",
+    "description": "Integrate all the components into a single application.",
+    "status": "todo",
+    "dependencies": [3, 8, 13]
+  },
+  {
+    "id": 15,
+    "title": "Main Application: Implement User Flow",
+    "description": "Implement the main user flow: display signal, select segment, perform convolution, and display results.",
+    "status": "todo",
+    "dependencies": [14]
+  },
+  {
+    "id": 16,
+    "title": "Documentation: Add Code Comments",
+    "description": "Add comments and documentation to the code.",
+    "status": "todo",
+    "dependencies": [15]
+  },
+  {
+    "id": 17,
+    "title": "Documentation: Refine UI and Visualizations",
+    "description": "Refine the UI and visualizations for clarity and ease of use.",
+    "status": "todo",
+    "dependencies": [15]
+  },
+  {
+    "id": 18,
+    "title": "Documentation: Create README",
+    "description": "Create a README.md file with instructions on how to run the program.",
+    "status": "todo",
+    "dependencies": [15]
+  }
+]
