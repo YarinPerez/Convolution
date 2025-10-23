@@ -5,7 +5,7 @@ This project is a Python application that demonstrates the use of 1D convolution
 ## Features
 
 *   **Signal Generation:** Generates a 1D signal based on a sine function.
-*   **Interactive Pattern Selection:** Allows the user to select a segment of the signal to be used as a pattern for matching.
+*   **Pattern Selection:** Allows the user to provide a segment of the signal as a command-line argument to be used as a pattern for matching.
 *   **Convolution:** Performs normalized cross-correlation to find the occurrences of the selected pattern in the signal.
 *   **Pattern Matching:** Identifies the locations where the pattern appears in the signal based on the convolution result.
 *   **Visualization:** Displays the original signal, the selected pattern, the matched patterns, and the convolution result in separate plots.
@@ -13,13 +13,12 @@ This project is a Python application that demonstrates the use of 1D convolution
 
 ## How it Works
 
-1.  The program starts and displays a plot of one cycle of the generated sine wave signal.
-2.  The user selects a segment of the signal from the plot by clicking and dragging the mouse. This selected segment is used as the convolution kernel.
-3.  The program automatically performs the convolution and identifies matching patterns.
-4.  The program displays two separate plots:
+1.  The program starts, taking a segment of the generated sine wave signal as a command-line argument to be used as the convolution kernel.
+2.  The program automatically performs the convolution and identifies matching patterns.
+3.  The program displays two separate plots:
     *   A plot showing the original signal, the selected segment, and the matching patterns.
     *   A separate plot showing the convolution result.
-5.  The program saves the two plots as `signal_and_matches.png` and `convolution_result.png`.
+4.  The program saves the two plots as `signal_and_matches.png` and `convolution_result.png`.
 
 ## Installation
 
@@ -31,18 +30,30 @@ This project is a Python application that demonstrates the use of 1D convolution
     ```bash
     cd convolution-analysis
     ```
-3.  Install the required dependencies:
+3.  Create a virtual environment using `uv`:
     ```bash
-    pip install -r requirements.txt
+    uv venv
     ```
-    *Note: You may need to create a `requirements.txt` file first. See the dependencies section below.*
+4.  Activate the virtual environment:
+    - On Windows:
+        ```bash
+        .venv\Scripts\activate
+        ```
+    - On macOS and Linux:
+        ```bash
+        source .venv/bin/activate
+        ```
+5.  Install the required dependencies:
+    ```bash
+    uv pip install -r requirements.txt
+    ```
 
 ## Usage
 
-To run the program, execute the following command in your terminal:
+To run the program, execute the following command in your terminal, providing the pattern as a comma-separated string of numbers:
 
 ```bash
-python main.py
+python main.py --pattern "0.5,0.8,1.0,0.8,0.5"
 ```
 
 ## Dependencies
@@ -52,10 +63,16 @@ The program requires the following Python libraries:
 *   `numpy`
 *   `matplotlib`
 
-You can install them using pip:
+To generate a `requirements.txt` file, you can use:
 
 ```bash
-pip install numpy matplotlib
+python -m pip freeze > requirements.txt
+```
+
+Then, install them using `uv`:
+
+```bash
+uv pip install -r requirements.txt
 ```
 
 ## Output
