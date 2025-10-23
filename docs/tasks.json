@@ -7,11 +7,18 @@
     "dependencies": []
   },
   {
+    "id": 19,
+    "title": "Project Setup: Configure uv Virtual Environment",
+    "description": "Set up the project to use a uv virtual environment for dependency management.",
+    "status": "todo",
+    "dependencies": []
+  },
+  {
     "id": 2,
     "title": "Signal Generation: Implement Signal Generation",
     "description": "Implement a function to generate the sine wave signal based on the specified parameters (10 cycles, 200 samples per cycle).",
     "status": "todo",
-    "dependencies": [1]
+    "dependencies": [1, 19]
   },
   {
     "id": 3,
@@ -21,32 +28,18 @@
     "dependencies": [2]
   },
   {
-    "id": 4,
-    "title": "User Interface: Create Basic UI",
-    "description": "Create a basic UI to display the generated signal.",
+    "id": 20,
+    "title": "Input Handling: Parse Start and End Point Arguments",
+    "description": "Implement functionality to parse the start and end points (in radians) provided as command-line arguments to define the pattern segment.",
     "status": "todo",
-    "dependencies": [2]
-  },
-  {
-    "id": 5,
-    "title": "User Interface: Implement Segment Selection",
-    "description": "Implement the functionality for the user to select a segment of the signal.",
-    "status": "todo",
-    "dependencies": [4]
-  },
-  {
-    "id": 6,
-    "title": "User Interface: Implement Snap to Sample Points",
-    "description": "Ensure the selection mechanism snaps to the discrete sample points of the signal.",
-    "status": "todo",
-    "dependencies": [5]
+    "dependencies": []
   },
   {
     "id": 7,
     "title": "Convolution: Implement Convolution",
     "description": "Implement the convolution operation between the signal and the selected segment (kernel). Note: The convolution should be implemented in a way that the result peaks when the pattern is matched. This can be achieved by using normalized cross-correlation or by manipulating the kernel.",
     "status": "todo",
-    "dependencies": [2, 6]
+    "dependencies": [2, 20]
   },
   {
     "id": 8,
@@ -74,7 +67,7 @@
     "title": "Visualization: Implement Main Plot",
     "description": "Implement the visualization of the original signal, the selected pattern, and the highlighted matched patterns in a single plot.",
     "status": "todo",
-    "dependencies": [2, 6, 10]
+    "dependencies": [2, 10, 20]
   },
   {
     "id": 12,
@@ -85,22 +78,29 @@
   },
   {
     "id": 13,
-    "title": "Visualization: Implement Image Save",
+    "title": "Output: Implement Image Save",
     "description": "Add a feature to save the visualizations as an image file (e.g., PNG).",
     "status": "todo",
     "dependencies": [11, 12]
+  },
+  {
+    "id": 21,
+    "title": "Output: Print Convolution Result to Console",
+    "description": "Implement functionality to print the convolution result to the console.",
+    "status": "todo",
+    "dependencies": [7]
   },
   {
     "id": 14,
     "title": "Main Application: Integrate Components",
     "description": "Integrate all the components into a single application.",
     "status": "todo",
-    "dependencies": [3, 8, 13]
+    "dependencies": [3, 8, 13, 21]
   },
   {
     "id": 15,
     "title": "Main Application: Implement User Flow",
-    "description": "Implement the main user flow: display signal, select segment, perform convolution, and display results.",
+    "description": "Implement the main user flow: generate signal, parse pattern argument, perform convolution, save images, and print result to console.",
     "status": "todo",
     "dependencies": [14]
   },
@@ -113,8 +113,8 @@
   },
   {
     "id": 17,
-    "title": "Documentation: Refine UI and Visualizations",
-    "description": "Refine the UI and visualizations for clarity and ease of use.",
+    "title": "Documentation: Refine Visualizations",
+    "description": "Refine the visualizations for clarity and ease of use.",
     "status": "todo",
     "dependencies": [15]
   },

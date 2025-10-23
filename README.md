@@ -50,10 +50,10 @@ This project is a Python application that demonstrates the use of 1D convolution
 
 ## Usage
 
-To run the program, execute the following command in your terminal, providing the pattern as a comma-separated string of numbers:
+To run the program, execute the following command in your terminal, providing the start and end points (in radians) of the pattern within a single sine wave cycle:
 
 ```bash
-python main.py --pattern "0.5,0.8,1.0,0.8,0.5"
+python main.py --start_point 0.0 --end_point 1.57
 ```
 
 ## Dependencies
