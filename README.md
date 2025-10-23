@@ -81,3 +81,13 @@ The program will generate and save two image files in the project's root directo
 
 *   `signal_and_matches.png`: A plot showing the original signal, the selected pattern (kernel), and the identified matching patterns.
 *   `convolution_result.png`: A plot showing the result of the convolution operation.
+
+## Example Output
+
+### Signal and Matches
+
+![Signal and Matches](signal_and_matches.png)
+
+### Convolution Result
+
+![Convolution Result](convolution_result.png)
